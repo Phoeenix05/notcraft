@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+rlua = "0.19.7"
 cbindgen = "0.25.0"
 env_logger = "0.10.0"
 log = "0.4.20"

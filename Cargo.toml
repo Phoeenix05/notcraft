@@ -12,14 +12,14 @@ opt-level = 1
 [profile.dev.package."*"]
 opt-level = 3
 
-# [profile.release]
-# strip = true
-# lto = "thin"
-# codegen-units = 1
+[profile.release]
+strip = true
+lto = "thin"
+codegen-units = 10
 
 [dependencies]
 bevy = { version = "0.11.2", features = ["dynamic_linking"] }
 env_logger = "0.10.0"
 log = "0.4.20"
 notcraft_lib = { path = "./crates/notcraft_lib" }
-notcraft_luabind = { path = "./crates/notcraft_luabind" }
+# notcraft_luabind = { path = "./crates/notcraft_luabind" } # On hold

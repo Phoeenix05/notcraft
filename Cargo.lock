@@ -2409,7 +2409,6 @@ dependencies = [
  "env_logger",
  "log",
  "notcraft_lib",
- "notcraft_luabind",
 ]
 
 [[package]]
@@ -2417,7 +2416,6 @@ name = "notcraft_lib"
 version = "0.1.0"
 dependencies = [
  "bevy",
- "rlua",
 ]
 
 [[package]]
@@ -2427,6 +2425,7 @@ dependencies = [
  "cbindgen",
  "env_logger",
  "log",
+ "rlua",
 ]
 
 [[package]]
