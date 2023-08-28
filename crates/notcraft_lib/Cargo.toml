@@ -1,0 +1,8 @@
+[package]
+name = "notcraft_lib"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rlua = "0.19.7"
+bevy = { version = "0.11.2", features = ["dynamic_linking"] }
