@@ -2409,6 +2409,16 @@ dependencies = [
  "env_logger",
  "log",
  "notcraft_lib",
+ "notcraft_macros",
+]
+
+[[package]]
+name = "notcraft_derive"
+version = "0.1.0"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 2.0.29",
 ]
 
 [[package]]
@@ -2426,6 +2436,13 @@ dependencies = [
  "env_logger",
  "log",
  "rlua",
+]
+
+[[package]]
+name = "notcraft_macros"
+version = "0.1.0"
+dependencies = [
+ "notcraft_derive",
 ]
 
 [[package]]

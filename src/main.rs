@@ -1,7 +1,7 @@
 use bevy::{
     log::LogPlugin,
     prelude::*,
-    window::{PresentMode, PrimaryWindow, WindowTheme},
+    window::{PresentMode, WindowTheme},
 };
 
 fn main() {
@@ -25,20 +25,10 @@ fn main() {
                 .disable::<LogPlugin>(),
         )
         .add_systems(Startup, notcraft_lib::setup)
-        .add_systems(Update, change_clear_color)
+        .add_systems(PostStartup, cam_control)
         .run();
-    log::info!("test");
 }
 
-fn change_clear_color(
-    mut clear_color: ResMut<ClearColor>,
-    q_windows: Query<&Window, With<PrimaryWindow>>,
-) {
-    if let Some(pos) = q_windows.single().cursor_position() {
-        clear_color.0 = Color::rgb(
-            pos.x / 1280.0,
-            (pos.x / 1280.0 / 2.0) + (pos.y / 800.0 / 2.0),
-            pos.y / 800.0,
-        );
-    }
+fn cam_control(q: Query<&Transform, With<Camera3d>>) {
+    println!("{:?}", q.single().translation);
 }

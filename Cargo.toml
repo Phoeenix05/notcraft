@@ -23,3 +23,4 @@ env_logger = "0.10.0"
 log = "0.4.20"
 notcraft_lib = { path = "./crates/notcraft_lib" }
 # notcraft_luabind = { path = "./crates/notcraft_luabind" } # On hold
+notcraft_macros = { path = "./crates/notcraft_macros", features = ["derive"] }
