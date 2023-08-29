@@ -1,6 +1,6 @@
-#[cfg(feature = "derive")]
-pub use notcraft_derive::MyDeriveTrait;
-
-pub trait MyDeriveTrait {
-    fn name(&self);
+#[macro_export]
+macro_rules! lua_ctx {
+    ($ident:ident) => {
+        fn __lua_ctx__$ident() {}
+    };
 }

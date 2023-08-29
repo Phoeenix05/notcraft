@@ -6,7 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-notcraft_derive = { path = "../notcraft_derive", optional = true }
+# notcraft_derive = { path = "../notcraft_derive", optional = true }
 
-[features]
-derive = ["notcraft_derive"]
+# [features]
+# derive = ["notcraft_derive"]
