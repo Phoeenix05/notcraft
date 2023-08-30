@@ -26,4 +26,3 @@ rlua = "0.19.7"
 # notcraft_luabind = { path = "./crates/notcraft_luabind" } # On hold
 notcraft_macros = { path = "./crates/notcraft_macros" }
 notcraft_derive = { path = "./crates/notcraft_derive" }
-anyhow = "1.0.75"

@@ -40,8 +40,14 @@ pub fn lua_ctx(_attr: TokenStream, item: TokenStream) -> TokenStream {
         #input_fn
 
         #[allow(non_snake_case)]
-        fn #fn_name(lua: &rlua::Lua) {
-            lua.context(|ctx| {
+        fn #fn_name() {
+            // FIXME: Lifetime problems with Lua context.
+            // 
+            // lifetime may not live long enough.
+            // has type `LuaContext<'1>`
+            // returning this value requires that `'1` must outlive `'2`
+            let lua_ctx = LUA_CTX.lock().unwrap();
+            lua_ctx.0.context(|ctx| {
                 ctx.create_function(|_, (#(#param_names,)*): (#(#param_types,)*)| Ok(#original_name(#(#param_names,)*)))
             });
         }
